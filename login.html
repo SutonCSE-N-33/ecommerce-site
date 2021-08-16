@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,
+700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+        <div class="container">
+            <div class="nav-bar">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt="" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="menuitems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="login.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="img/cart.png" width="30px" height="30px" class="cart"></a>
+                <img src="img/menu.png" class="menu-icon" alt=""  onclick="menutoggle()">
+            </div>
+        </div>
+
+        <!-------------------------Account page--------------------->
+        <div class="account-page">
+            <div class="cntainer">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="img/image1.png" alt="" width="100%">
+                    </div>
+
+                    <div class="col-2">
+                        <div class="form-container">
+                            <div class="form-btn">
+                                <span onclick="login()">Login</span>
+                                <span onclick="register()">Register</span>
+                                <hr id="indicator">
+                            </div>
+
+                            <form action="" id="loginForm">
+                                <input type="text" placeholder="username">
+                                <input type="password" placeholder="Password">
+                                <input type="submit" placeholder="Submit" value="Login">
+                                <a href="">Forget password</a>
+                            </form>
+
+                            <form action="" id="regiForm">
+                                <input type="text" placeholder="username">
+                                <input type="email" placeholder="Email">
+                                <input type="password" placeholder="Password">
+                                <button type="submit" class="btn">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+  
+      <!-------------------------------Footer-------------------------------->
+
+      <div class="footer">
+          <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                      <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone</p>
+                     <div class="app-logo">
+                         <img src="img/play-store.png" alt="">
+                          <img src="img/app-store.png" alt="">
+                      </div>
+                  </div>
+                <div class="footer-col-2">
+                    <img src="img/logo-white.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                         Fugiat mollitia neque aut, possimus distinctio ducimus accusamus!</p>
+              </div>
+              <div class="footer-col-3">
+                   <h3>Useful Links</h3> 
+                   <ul>
+                      <li>Coupons</li>
+                      <li>Blog post</li>
+                      <li>Return Policy</li>
+                      <li>Join Affiliate</li>
+                   </ul>
+              </div>
+  
+              <div class="footer-col-3">
+                  <h3>Follow us</h3> 
+                  <ul>
+                     <li>Facebook</li>
+                     <li>Twitter</li>
+                     <li>Instagram</li>
+                     <li>youtube</li>
+                  </ul>
+             </div>
+
+             <hr class="footer-hr">
+             <p class="copyright">Copyright 2021 - Nazrul islam suton</p>
+             
+            </div>
+          </div>
+      </div>
+
+
+
+      <!---------------------------js for toggle menu--------------------------->
+      <script>
+          var menuItems =document.getElementById("menuitems");
+          menuItems.style.maxHeight="0px";
+
+          function menutoggle(){
+              if(menuItems.style.maxHeight=="0px"){
+                  menuItems.style.maxHeight = "200px";
+              }
+              else{
+                  menuItems.style.maxHeight="0px";
+              }
+          }
+      </script>
+
+
+<script>
+    var loginForm = document.getElementById("loginForm");
+    var regForm = document.getElementById("regiForm");
+    var indicator = document.getElementById("indicator");
+
+
+    function register(){
+        regForm.style.transform = "translateX(0px)";
+        loginForm.style.transform = "translateX(0px)";
+        indicator.style.transform ="translateX(100px)"
+    }
+    function login(){
+        regForm.style.transform = "translateX(300px)";
+        loginForm.style.transform = "translateX(300px)";
+        indicator.style.transform = "translateX(0px)";
+    }
+        
+    
+</script>
+</body>
+</html>
